@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(to right, #434343, #000000);
+    padding: 20px;
+}
+
+header {
+    font-size: 72px;
+    background: linear-gradient(to right, #ffefba, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#todo {
+    border: solid medium #ffefba;
+}
