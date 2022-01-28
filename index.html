@@ -9,7 +9,11 @@
     <header> ToDoList </header>
     <div class="container">
         <div id="todo-list">
-            <button id="add-todo"> Add a list </button>
+            <input type="text" id="todo-input" placeholder="Things to do..." autocomplete="off" autofocus>
+            <span onclick="addElement()" class="addButton">Add</span>
+            <ul id="ul-list">
+
+            </ul>
         </div>
         <div id="progress-list">
             <button id="add-progress"> Add a list </button>
