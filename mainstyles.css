@@ -9,6 +9,7 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .container {

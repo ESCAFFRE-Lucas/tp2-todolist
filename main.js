@@ -4,7 +4,7 @@ function addElement() {
     const list = document.createElement("li");
     const inputValue = document.getElementById("todo-input").value;
     const text = document.createTextNode(inputValue);
-    const unorderlist = document.getElementById("ul-list");
+    const unordered = document.getElementById("ul-list");
     list.appendChild(text);
     document.getElementById("ul-list").appendChild(list);
     document.getElementById("todo-input").value = "";
@@ -19,7 +19,7 @@ function addElement() {
 
     for (let i = 0; i < close.length; i++) {
         close[i].onclick = function () {
-            unorderlist.removeChild(list);
+            unordered.removeChild(list);
         }
     }
 }
