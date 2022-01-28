@@ -1,16 +1,15 @@
-const button = document.getElementById("add-todo")
-
 function addElement() {
     const list = document.createElement("li");
     const inputValue = document.getElementById("todo-input").value;
     const text = document.createTextNode(inputValue);
     const unordered = document.getElementById("ul-list");
+
     list.appendChild(text);
     document.getElementById("ul-list").appendChild(list);
     document.getElementById("todo-input").value = "";
 
     const span = document.createElement("SPAN");
-    const txt = document.createTextNode("\u00D7");
+    const txt = document.createTextNode("\uf061");
     span.className = "close";
     span.appendChild(txt);
     list.appendChild(span);
@@ -23,11 +22,3 @@ function addElement() {
         }
     }
 }
-
-button.addEventListener("click", addElement)
-// const buttons = document.querySelectorAll("button")
-// buttons.forEach((button) => {
-//     button.addEventListener("click", addElement)
-// })
-
-
