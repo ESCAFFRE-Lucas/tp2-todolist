@@ -11,7 +11,7 @@ function addElement() {
     document.getElementById("todo-input").value = "";
 
     const span = document.createElement("SPAN");
-    const txt = document.createTextNode("\uf061");
+    const txt = document.createTextNode(" --> ");
     span.className = "next";
     span.appendChild(txt);
     list.appendChild(span);
@@ -30,7 +30,7 @@ function addElement() {
             copy.appendChild(copyText)
 
             const finals = document.createElement("SPAN");
-            const cross = document.createTextNode("\uf00d");
+            const cross = document.createTextNode("x");
 
 
             finals.className = "close";
