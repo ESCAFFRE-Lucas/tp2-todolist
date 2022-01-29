@@ -5,7 +5,7 @@ function addElement() {
     const unordered = document.getElementById("ul-list");
     const finish = document.getElementById("ul-finish")
 
-    list.className = "finish"
+    list.className = "start"
     list.appendChild(text);
     document.getElementById("ul-list").appendChild(list);
     document.getElementById("todo-input").value = "";
@@ -20,19 +20,25 @@ function addElement() {
 
     for (let i = 0; i < next.length; i++) {
         next[i].onclick = function () {
+            list.classList.remove("start");
+            list.classList.add("finish");
             const copy = list.cloneNode(false)
-            const copyTest = text.cloneNode(false)
+            const copyText = text.cloneNode(false)
 
             unordered.removeChild(list);
-            finish.append(copy, copyTest);
+            finish.append(copy);
+            copy.appendChild(copyText)
 
             const finals = document.createElement("SPAN");
             const cross = document.createTextNode("\uf00d");
 
 
             finals.className = "close";
+            finals.onclick = function () {
+                copy.remove();
+            }
             finals.appendChild(cross);
-            list.appendChild(finals);
+            copy.appendChild(finals);
         }
     }
 }
