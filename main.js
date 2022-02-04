@@ -1,4 +1,5 @@
 function addElement() {
+
     const list = document.createElement("li");
     const inputValue = document.getElementById("todo-input").value;
     const text = document.createTextNode(inputValue);
@@ -15,6 +16,7 @@ function addElement() {
     span.className = "next";
     span.appendChild(txt);
     list.appendChild(span);
+    localStorage.setItem("name", list.outerHTML)
 
     const next = document.getElementsByClassName("next");
 
@@ -39,6 +41,15 @@ function addElement() {
             }
             finals.appendChild(cross);
             copy.appendChild(finals);
+            localStorage.setItem("copy", copy.outerHTML)
         }
     }
 }
+
+let localList = localStorage.getItem("name");
+console.log(localList)
+document.getElementById("ul-list").innerHTML = localList
+
+let localCopy = localStorage.getItem("copy");
+console.log(localCopy)
+document.getElementById("ul-finish").innerHTML = localList
